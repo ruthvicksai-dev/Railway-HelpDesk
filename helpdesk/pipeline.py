@@ -24,11 +24,9 @@ def ask(question):
             - sql
             - dont_know
     """
-
-    # TODO: Implement question routing
-    # TODO: Integrate document search
-    # TODO: Integrate SQL queries
-    # TODO: Integrate answer generation
-    # TODO: Return the final response
-
-    pass
+    return {
+        "answer": "The system is being developed.",
+        "sources": [],
+        "sql": None,
+        "dont_know": True
+    }
