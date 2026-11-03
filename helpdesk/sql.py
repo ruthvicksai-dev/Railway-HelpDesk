@@ -199,61 +199,6 @@ def get_train_stops(train_number):
             "dont_know": True
         }
 
-def get_train_stops(train_number):
-
-    sql = """
-        SELECT
-            s.stop_sequence,
-            st.name,
-            s.arrival,
-            s.departure,
-            s.halt_min
-        FROM schedules s
-        JOIN stations st
-            ON s.station_code = st.code
-        WHERE s.train_number = ?
-        ORDER BY s.stop_sequence
-    """
-
-    try:
-        with get_connection() as conn:
-            conn.execute("PRAGMA query_only = ON")
-            cursor = conn.cursor()
-            cursor.execute(sql, (train_number,))
-            results = cursor.fetchall()
-
-        if not results:
-            return {
-                "answer": f"No schedule found for train {train_number}.",
-                "sources": [],
-                "sql": sql,
-                "dont_know": True
-            }
-
-        answer = f"Stops for train {train_number}:\n"
-
-        for stop in results:
-            answer += (
-                f"\n{stop[0]}. {stop[1]}"
-                f"\nArrival: {stop[2] or 'Not available'}"
-                f"\nDeparture: {stop[3] or 'Not available'}"
-                f"\nHalt: {stop[4] if stop[4] is not None else 'Not available'} minutes\n"
-            )
-
-        return {
-            "answer": answer,
-            "sources": [],
-            "sql": sql,
-            "dont_know": False
-        }
-
-    except sqlite3.Error:
-        return {
-            "answer": "Unable to retrieve train schedule.",
-            "sources": [],
-            "sql": None,
-            "dont_know": True
-        }
 
 def get_train_classes(train_number):
 
