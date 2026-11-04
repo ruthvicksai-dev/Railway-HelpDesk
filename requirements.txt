@@ -1,2 +1,10 @@
-# Project dependencies will be added and version-pinned
-# by the respective module owners.
+﻿# Core RAG, Document Extraction and OCR
+pymupdf>=1.24.0
+pypdf>=4.0.0
+beautifulsoup4>=4.12.0
+rapidocr-onnxruntime>=1.3.0
+onnxruntime>=1.17.0
+
+# LLM and Environment
+python-dotenv>=1.0.0
+google-generativeai>=0.8.0
