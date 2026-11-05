@@ -1,1 +1,26 @@
-[]
+[
+    {
+        "question": "What is the departure time of train 01101?"
+    },
+    {
+        "question": "What are the rules for carrying luggage according to railway guidelines?"
+    },
+    {
+        "question": "Which trains run from Hyderabad to Mumbai?"
+    },
+    {
+        "question": "What is the railway ticket cancellation and refund policy?"
+    },
+    {
+        "question": "What was the change made to the Advance Reservation Period from 1 November 2024?"
+    },
+    {
+        "question": "When should the first reservation chart preferably be prepared for trains departing between 14:00 and 23:59?"
+    },
+    {
+        "question": "From which date did Aadhaar authentication become mandatory for booking opening-day Tatkal tickets?"
+    },
+    {
+        "question": "What cancellation charge applies to confirmed Vande Bharat Sleeper tickets cancelled between 72 and 8 hours before departure?"
+    }
+]
