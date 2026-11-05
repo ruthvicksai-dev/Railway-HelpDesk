@@ -10,5 +10,29 @@
     },
     {
         "question": "What is the railway ticket cancellation and refund policy?"
+    },
+    {
+        "question": "What is the departure time of train 12675 Kovai Express?",
+        "expected_answer": "Train 12675 (Kovai Express) departs at 06:15.",
+        "sql": "SELECT departure FROM trains WHERE number = '12675';",
+        "sources": []
+    },
+    {
+        "question": "Which classes are available on train 12002 New Delhi-Bhopal Shatabdi Express?",
+        "expected_answer": "Train 12002 offers First AC (1A) and Chair Car (CC).",
+        "sql": "SELECT has_1a, has_2a, has_3a, has_cc, has_fc, has_sl FROM trains WHERE number = '12002';",
+        "sources": []
+    },
+    {
+        "question": "How many Shatabdi trains are in the timetable?",
+        "expected_answer": "There are 31 Shatabdi trains (type code Shtb) in the timetable.",
+        "sql": "SELECT COUNT(*) FROM trains WHERE type_code = 'Shtb';",
+        "sources": []
+    },
+    {
+        "question": "Which trains go from Chennai Central (MAS) to Bangalore City (SBC)?",
+        "expected_answer": "Trains between MAS and SBC include 12027 Shatabdi Exp, 12607 Lalbagh Exp, 12609 Intercity Exp, 12639 Brindavan Exp, and 12657 Mail.",
+        "sql": "SELECT number, name, departure, arrival FROM trains WHERE from_station_code = 'MAS' AND to_station_code = 'SBC';",
+        "sources": []
     }
 ]
