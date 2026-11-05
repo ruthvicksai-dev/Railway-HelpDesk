@@ -1,1 +1,14 @@
-[]
+[
+    {
+        "question": "What is the departure time of train 01101?"
+    },
+    {
+        "question": "What are the rules for carrying luggage according to railway guidelines?"
+    },
+    {
+        "question": "Which trains run from Hyderabad to Mumbai?"
+    },
+    {
+        "question": "What is the railway ticket cancellation and refund policy?"
+    }
+]
