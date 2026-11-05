@@ -21,7 +21,7 @@ The system answers railway passenger questions using official railway documents 
 - Python
 - Google Gemini API
 - OCR and PDF processing
-- Semantic and keyword search
+- Keyword-based search and retrieval
 - SQLite
 
 ## Project Structure
@@ -31,25 +31,31 @@ See the project folders for individual modules.
 ## Setup Instructions
 
 1. Clone the repository.
-2. Create a Python virtual environment.
-3. Install dependencies using requirements.txt.
-4. Create a `.env` file using `.env.example`.
-5. Add your Gemini API key.
+2. Create a Python 3.12.x virtual environment.
+3. Install dependencies using `requirements.txt`.
+4. Create an `.env` file using `.env.example`.
+5. Add your Gemini API key and model name.
 6. Extract the provided data pack into `data/`.
 
 ## Running the Project
 
-Build the index:
-
-    python build_index.py
-
 Ask a question:
 
-    python ask.py "Your railway question"
+```bash
+python ask.py
+```
 
-Run evaluation:
+Run the built-in sample questions:
 
-    python run_questions.py eval/test_set.json eval/results.json
+```bash
+python run_questions.py
+```
+
+Run the evaluation questions:
+
+```bash
+python run_questions.py eval/test_set.json eval/results.json
+```
 
 ## Team Members
 
@@ -61,4 +67,4 @@ Run evaluation:
 
 ## Project Status
 
-Initial development and repository setup.
+Evaluation and final integration.
