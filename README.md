@@ -39,6 +39,12 @@ See the project folders for individual modules.
 
 ## Running the Project
 
+Build the search index (processes documents and builds the searchable database):
+
+```bash
+python build_index.py
+```
+
 Ask a question:
 
 ```bash
